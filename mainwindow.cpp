@@ -47,6 +47,7 @@ MainWindow::MainWindow(QWidget *parent) :
                        "5.modulo(%),6.square(&),7.power(^)\n\n"
                        "Expression ends with '=' \n"
                        "After typing, press Enter or Start to get the answer");
+    //更新行，用于区分版本
 
     //实现按确定得到答案
     QObject::connect(beginbutton,&QPushButton::clicked,[=](){
