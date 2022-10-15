@@ -22,6 +22,7 @@ public:
     QPushButton *beginbutton;
     QLabel *basicinfo;
     QLabel *resultinfo;
+    QLabel *messagebox;
     double result;
 
     ~MainWindow();

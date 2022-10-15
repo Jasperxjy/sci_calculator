@@ -30,11 +30,12 @@ SOURCES += \
     osp.cpp \
     cal.cpp \
     getnextchar.cpp \
-    isdigit.cpp \
     isoperator.cpp \
-    get2operator.cpp \
     calcu.cpp \
-    mylstack.cpp
+    mylstack.cpp \
+    get2operands.cpp \
+    isdigit.cpp \
+    link.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -42,11 +43,12 @@ HEADERS += \
     osp.h \
     cal.h \
     getnextchar.h \
-    isdigit.h \
     isoperator.h \
-    get2operator.h \
     calcu.h \
-    mylstack.h
+    mylstack.h \
+    get2operands.h \
+    isdigit.h \
+    link.h
 
 FORMS += \
         mainwindow.ui
