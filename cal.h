@@ -6,7 +6,7 @@ class cal
 {
 public:
     cal();
-    int get(char ch);
+    bool get(char op,double x,double y,double &r);
 };
 
 #endif // CAL_H

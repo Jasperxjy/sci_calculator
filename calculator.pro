@@ -34,7 +34,8 @@ SOURCES += \
     calcu.cpp \
     mylstack.cpp \
     get2operands.cpp \
-    isdigit.cpp
+    isdigit.cpp \
+    link.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -46,7 +47,8 @@ HEADERS += \
     calcu.h \
     mylstack.h \
     get2operands.h \
-    isdigit.h
+    isdigit.h \
+    link.h
 
 FORMS += \
         mainwindow.ui
