@@ -2,10 +2,11 @@
 #define ISDIGIT_H
 
 
-class isdigit
+class Isdigit
 {
 public:
-    isdigit();
+    Isdigit();
+    bool judge(char ch);
 };
 
 #endif // ISDIGIT_H

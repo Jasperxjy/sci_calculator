@@ -6,6 +6,7 @@ class cal
 {
 public:
     cal();
+    int get(char ch);
 };
 
 #endif // CAL_H

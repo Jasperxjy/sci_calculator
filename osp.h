@@ -6,6 +6,7 @@ class osp
 {
 public:
     osp();
+    int get(char ch);
 };
 
 #endif // OSP_H

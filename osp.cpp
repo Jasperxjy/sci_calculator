@@ -4,3 +4,10 @@ osp::osp()
 {
 
 }
+
+int osp::get(char ch)
+{
+    //Çë±àÐ´
+    return 1;//Õ¼Î»·û
+
+}
