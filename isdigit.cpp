@@ -1,6 +1,6 @@
 #include "isdigit.h"
 
-isdigit::isdigit()
+Isdigit::Isdigit()
 {
 
 }
