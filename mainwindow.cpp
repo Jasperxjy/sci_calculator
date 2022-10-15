@@ -6,7 +6,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    //´´½¨ÊäÈë¿ò£¬°´Å¥£¬¼ÆËãµ¥Ôª£¬ÌáÊ¾¿ò£¬´ð°¸¿òµÄ¶ÔÏó
+    //åˆ›å»ºè¾“å…¥æ¡†ï¼ŒæŒ‰é’®ï¼Œè®¡ç®—å•å…ƒï¼Œæç¤ºæ¡†ï¼Œç­”æ¡ˆæ¡†çš„å¯¹è±¡
     mycalculator=new calcu();
     inputEdit=new QLineEdit(this);
     beginbutton=new QPushButton(this);
@@ -14,46 +14,47 @@ MainWindow::MainWindow(QWidget *parent) :
     resultinfo=new QLabel(this);
     messagebox=new QLabel(this);
 
-    //ÉèÖÃ´°¿Ú´óÐ¡
+    //è®¾ç½®çª—å£å¤§å°
     this->resize(500,500);
     inputEdit->move(50,50);
-    //ÉèÖÃÌáÊ¾ÐÅÏ¢
+    //è®¾ç½®æç¤ºä¿¡æ¯
     inputEdit->setPlaceholderText("please input formula...");
-    //ÈÃÊäÈë¿òÏÔÊ¾¡°Ò»¼üÇå³ý¡±°´Å¥
+    //è®©è¾“å…¥æ¡†æ˜¾ç¤ºâ€œä¸€é”®æ¸…é™¤â€æŒ‰é’®
     inputEdit->setClearButtonEnabled(true);
-    //ÉèÖÃÊäÈë¿ò´óÐ¡
+    //è®¾ç½®è¾“å…¥æ¡†å¤§å°
     inputEdit->resize(400,30);
 
-    //ÉèÖÃ°´Å¥´óÐ¡
+    //è®¾ç½®æŒ‰é’®å¤§å°
     beginbutton->resize(70,30);
-    //ÉèÖÃ°´Å¥ÎÄ×Ö
+    //è®¾ç½®æŒ‰é’®æ–‡å­—
     beginbutton->setText("Begin");
-    //ÉèÖÃ°´Å¥Î»ÖÃ
+    //è®¾ç½®æŒ‰é’®ä½ç½®
     beginbutton->move(215,110);
 
-    //ÉèÖÃ´ð°¸¿òÎ»ÖÃ
+    //è®¾ç½®ç­”æ¡ˆæ¡†ä½ç½®
     resultinfo->move(100,140);
-    //ÉèÖÃ´ð°¸¿ò´óÐ¡
+    //è®¾ç½®ç­”æ¡ˆæ¡†å¤§å°
     resultinfo->resize(300,30);
 
-    //ÉèÖÃÌáÊ¾¿òÎ»ÖÃ
+    //è®¾ç½®æç¤ºæ¡†ä½ç½®
     basicinfo->move(50,190);
-    //ÉèÖÃÌáÊ¾¿ò´óÐ¡
+    //è®¾ç½®æç¤ºæ¡†å¤§å°
     basicinfo->resize(400,300);
-    //ÉèÖÃÌáÊ¾ÐÅÏ¢
+    //è®¾ç½®æç¤ºä¿¡æ¯
     basicinfo->setText("Welcome to use Calculator Ver1.0 \n\n"
                        "Instructions for use\n expression contains: \n"
                        "1.plus(+),2.subtraction(-),3.multiplication(*),4.division(/)\n"
                        "5.modulo(%),6.square(&),7.power(^)\n\n"
                        "Expression ends with '=' \n"
                        "After typing, press Enter or Start to get the answer");
-    //ÉèÖÃÏûÏ¢¿òÎ»ÖÃ
-    messagebox->move(85);
-    //ÉèÖÃÏûÏ¢¿ò´óÐ¡
-    messagebox->resize(200,30);
-    //¸üÐÂÐÐ£¬ÓÃÓÚÇø·Ö°æ±¾
 
-    //ÊµÏÖ°´È·¶¨µÃµ½´ð°¸
+    //è®¾ç½®æ¶ˆæ¯æ¡†ä½ç½®
+    messagebox->move(85);
+    //è®¾ç½®æ¶ˆæ¯æ¡†å¤§å°
+    messagebox->resize(200,30);
+    //æ›´æ–°è¡Œï¼Œç”¨äºŽåŒºåˆ†ç‰ˆæœ¬
+
+    //å®žçŽ°æŒ‰ç¡®å®šå¾—åˆ°ç­”æ¡ˆ
     QObject::connect(beginbutton,&QPushButton::clicked,[=](){
         QString temp = inputEdit->text();
         mycalculator->ch=temp;
@@ -64,7 +65,7 @@ MainWindow::MainWindow(QWidget *parent) :
             messagebox->setText(mycalculator->message);
         }
     });
-    //ÊµÏÖ»Ø³µµÃµ½´ð°¸
+    //å®žçŽ°å›žè½¦å¾—åˆ°ç­”æ¡ˆ
     QObject::connect(inputEdit,&QLineEdit::returnPressed,[=](){
         QString temp = inputEdit->text();
         mycalculator->ch=temp;
