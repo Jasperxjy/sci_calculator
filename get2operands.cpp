@@ -1,11 +1,13 @@
-#include "get2operator.h"
+#include "get2operands.h"
 
-get2operator::get2operator()
+get2operands::get2operands()
 {
 
 }
 
-bool get2operator::Get2Operator(char ch)
+bool get2operands::get(MyLStack &opend, double &x, double &y)
 {
-    return true;
+    //Çë±àÐ´
+    return false;//Õ¼Î»·û
 }
+

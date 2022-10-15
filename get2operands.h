@@ -1,12 +1,13 @@
-#ifndef GET2OPERATOR_H
-#define GET2OPERATOR_H
+#ifndef GET2OPERANDS_H
+#define GET2OPERANDS_H
 
+#include "mylstack.h"
 
-class get2operator
+class get2operands
 {
 public:
-    get2operator();
-    bool Get2Operator(char ch);
+    get2operands();
+    bool get(MyLStack &opend,double &x,double &y);
 };
 
-#endif // GET2OPERATOR_H
+#endif // GET2OPERANDS_H

@@ -6,6 +6,7 @@ class isp
 {
 public:
     isp();
+    int get(char ch);
 };
 
 #endif // ISP_H

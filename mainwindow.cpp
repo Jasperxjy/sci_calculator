@@ -1,6 +1,5 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include "QDebug"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -13,6 +12,7 @@ MainWindow::MainWindow(QWidget *parent) :
     beginbutton=new QPushButton(this);
     basicinfo=new QLabel(this);
     resultinfo=new QLabel(this);
+    messagebox=new QLabel(this);
 
     //设置窗口大小
     this->resize(500,500);
@@ -47,6 +47,10 @@ MainWindow::MainWindow(QWidget *parent) :
                        "5.modulo(%),6.square(&),7.power(^)\n\n"
                        "Expression ends with '=' \n"
                        "After typing, press Enter or Start to get the answer");
+    //设置消息框位置
+    messagebox->move(85);
+    //设置消息框大小
+    messagebox->resize(200,30);
     //更新行，用于区分版本
 
     //实现按确定得到答案
@@ -56,6 +60,9 @@ MainWindow::MainWindow(QWidget *parent) :
         qDebug()<<mycalculator->ch;
         result=mycalculator->getReult();
         resultinfo->setText(QString::number(result,'f',8));
+        if(mycalculator->message!=""){
+            messagebox->setText(mycalculator->message);
+        }
     });
     //实现回车得到答案
     QObject::connect(inputEdit,&QLineEdit::returnPressed,[=](){
@@ -64,6 +71,9 @@ MainWindow::MainWindow(QWidget *parent) :
         qDebug()<<mycalculator->ch;
        result=mycalculator->getReult();
       resultinfo->setText(QString::number(result,'f',8));
+      if(mycalculator->message!=""){
+          messagebox->setText(mycalculator->message);
+      }
     });
 
 }

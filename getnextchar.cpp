@@ -7,5 +7,5 @@ getnextchar::getnextchar()
 
 void getnextchar::GetNextChar(char &ch)
 {
-
+    //«Î±‡–¥
 }

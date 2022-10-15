@@ -6,6 +6,7 @@ class Isdigit
 {
 public:
     Isdigit();
+    bool judge(char ch);
 };
 
 #endif // ISDIGIT_H
