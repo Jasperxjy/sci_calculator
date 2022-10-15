@@ -1,13 +1,11 @@
 #ifndef GET2OPERANDS_H
 #define GET2OPERANDS_H
-
-#include "mylstack.h"
-
+#include "Mylstack.h"
 class get2operands
 {
 public:
     get2operands();
-    bool get(MyLStack &opend,double &x,double &y);
+    bool get(MyLStack<double> &opend,double &x,double &y);
 };
 
 #endif // GET2OPERANDS_H

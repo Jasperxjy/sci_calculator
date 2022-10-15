@@ -21,7 +21,7 @@ public:
     void clear(){
         //遍历delete所有结点
         while(top != nullptr){
-            Link<Elem> temp = top;
+            Link<Elem> *temp = top;
             top = top->next;
             delete temp;
         }

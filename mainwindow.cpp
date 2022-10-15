@@ -1,4 +1,4 @@
-#include "mainwindow.h"
+﻿#include "mainwindow.h"
 #include "ui_mainwindow.h"
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -49,16 +49,15 @@ MainWindow::MainWindow(QWidget *parent) :
                        "After typing, press Enter or Start to get the answer");
 
     //设置消息框位置
-    messagebox->move(85);
+    messagebox->move(50,85);
     //设置消息框大小
-    messagebox->resize(200,30);
-    //更新行，用于区分版本
+    messagebox->resize(400,30);
 
     //实现按确定得到答案
     QObject::connect(beginbutton,&QPushButton::clicked,[=](){
         QString temp = inputEdit->text();
-        mycalculator->ch=temp;
-        qDebug()<<mycalculator->ch;
+        mycalculator->formula=temp;
+        qDebug()<<mycalculator->formula;
         result=mycalculator->getReult();
         resultinfo->setText(QString::number(result,'f',8));
         if(mycalculator->message!=""){
@@ -68,13 +67,13 @@ MainWindow::MainWindow(QWidget *parent) :
     //实现回车得到答案
     QObject::connect(inputEdit,&QLineEdit::returnPressed,[=](){
         QString temp = inputEdit->text();
-        mycalculator->ch=temp;
-        qDebug()<<mycalculator->ch;
-       result=mycalculator->getReult();
-      resultinfo->setText(QString::number(result,'f',8));
-      if(mycalculator->message!=""){
-          messagebox->setText(mycalculator->message);
-      }
+        mycalculator->formula=temp;
+        qDebug()<<mycalculator->formula;
+        result=mycalculator->getReult();
+        resultinfo->setText(QString::number(result,'f',8));
+        if(mycalculator->message!=""){
+            messagebox->setText(mycalculator->message);
+        }
     });
 
 }

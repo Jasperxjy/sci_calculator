@@ -32,10 +32,10 @@ SOURCES += \
     getnextchar.cpp \
     isoperator.cpp \
     calcu.cpp \
-    mylstack.cpp \
     get2operands.cpp \
     isdigit.cpp \
-    link.cpp
+    link.cpp \
+    Mylstack.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -45,10 +45,10 @@ HEADERS += \
     getnextchar.h \
     isoperator.h \
     calcu.h \
-    mylstack.h \
     get2operands.h \
     isdigit.h \
-    link.h
+    link.h \
+    Mylstack.h
 
 FORMS += \
         mainwindow.ui

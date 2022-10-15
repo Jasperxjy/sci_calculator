@@ -5,7 +5,7 @@ get2operands::get2operands()
 
 }
 
-bool get2operands::get(MyLStack &opend, double &x, double &y)
+bool get2operands::get(MyLStack<double> &opend, double &x, double &y)
 {
     //Çë±àÐ´
     return false;//Õ¼Î»·û

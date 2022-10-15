@@ -4,6 +4,7 @@
 /**
  * Create by ¡ı—«∆Ê on 2022/10/15
  */
+#include <cstddef>
 
 //class of node
 template <typename Elem>
