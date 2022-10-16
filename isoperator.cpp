@@ -1,4 +1,4 @@
-#include "isoperator.h"
+﻿#include "isoperator.h"
 
 isoperator::isoperator()
 {
@@ -37,6 +37,6 @@ bool isoperator::judge(char ch)
         break;
     default:
         return false;
-        break;
+        break;      
     }
 }
