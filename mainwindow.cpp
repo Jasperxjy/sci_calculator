@@ -15,7 +15,7 @@ MainWindow::MainWindow(QWidget *parent) :
     messagebox=new QLabel(this);
 
     //设置窗口大小
-    this->resize(500,500);
+    this->resize(500,380);
     inputEdit->move(50,50);
     //设置提示信息
     inputEdit->setPlaceholderText("please input formula...");
@@ -37,14 +37,14 @@ MainWindow::MainWindow(QWidget *parent) :
     resultinfo->resize(300,30);
 
     //设置提示框位置
-    basicinfo->move(50,190);
+    basicinfo->move(50,110);
     //设置提示框大小
     basicinfo->resize(400,300);
     //设置提示信息
     basicinfo->setText("Welcome to use Calculator Ver1.0 \n\n"
                        "Instructions for use\n expression contains: \n"
                        "1.plus(+),2.subtraction(-),3.multiplication(*),4.division(/)\n"
-                       "5.modulo(%),6.square(&),7.power(^)\n\n"
+                       "5.modulo(%),6.square(^(fraction)),7.power(^)\n\n"
                        "Expression ends with '=' \n"
                        "After typing, press Enter or Start to get the answer");
 
@@ -59,9 +59,9 @@ MainWindow::MainWindow(QWidget *parent) :
         mycalculator->formula=temp;
         qDebug()<<mycalculator->formula;
         result=mycalculator->getReult();
-        resultinfo->setText(QString::number(result,'f',8));
+        resultinfo->setText("Result: "+QString::number(result,'f',8));
         if(mycalculator->message!=""){
-            messagebox->setText(mycalculator->message);
+            messagebox->setText("Status:"+mycalculator->message);
         }
     });
     //实现回车得到答案
@@ -70,9 +70,9 @@ MainWindow::MainWindow(QWidget *parent) :
         mycalculator->formula=temp;
         qDebug()<<mycalculator->formula;
         result=mycalculator->getReult();
-        resultinfo->setText(QString::number(result,'f',8));
+        resultinfo->setText("Result: "+QString::number(result,'f',8));
         if(mycalculator->message!=""){
-            messagebox->setText(mycalculator->message);
+            messagebox->setText("Status:"+mycalculator->message);
         }
     });
 

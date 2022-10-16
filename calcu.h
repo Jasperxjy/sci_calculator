@@ -10,6 +10,7 @@
 #include "QString" //引入字符串
 #include "QDebug"
 #include <iostream>
+#include "cmath"
 
 class calcu
 {
@@ -28,8 +29,8 @@ public:
     double y;//运算时操作数2
     char f;//运算时操作符
     double t;//操作数临时变量
-    double operand;//操作数缓存
     QString message;//消息
+    QString digittemp;//
     cal *mycal;//引入计算单元
     getnextchar *mygetnextchar;
     get2operands *myget2operands;

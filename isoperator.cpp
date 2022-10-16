@@ -35,6 +35,9 @@ bool isoperator::judge(char ch)
     case ')' :
     return true;
         break;
+    case '=' :
+    return true;
+        break;
     default:
         return false;
         break;      

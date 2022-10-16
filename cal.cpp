@@ -36,6 +36,14 @@ int cal::get(char op,double x,double y,double &r)
     if ( op == '(' || op == ')'){
         return -3;
     }
+    if (op=='%'){
+        if( y != 0 ){
+            r = fmod(x,y);
+        }else {
+            return -1;
+        }
+    }
+
 
  return 1;//当前写的占位符 1表示成功 -1表示除0，-2表示开方出现错误，-3表示结构错误
 }
