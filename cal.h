@@ -1,7 +1,7 @@
 #ifndef CAL_H
 #define CAL_H
 
-
+#include <math.h>
 class cal
 {
 public:
