@@ -62,7 +62,7 @@ double calcu::getReult()
                     bool t;//存储get操作数的返回信息
                     t=myget2operands->get(OPND,y,x);
                     if(!t){
-                        message="err:Your formula is illegal,\np      lease check and reenter formula";
+                        message="err:Your formula is illegal,\n      please check and reenter formula";
                         return -2;
                     }
                     f=OPTR.pop();//弹出一个操作符
@@ -74,11 +74,11 @@ double calcu::getReult()
                     return -2;
                 }else if (a==-2) {
                     //当得到答案的部分返回-2，说明发生开方错误
-                    message="err:There is a squared error,\np      lease check and reenter formula";
+                    message="err:There is a squared error,\n      please check and reenter formula";
                     return -2;
                 }else if (a==-3) {
                     //当得到答案的部分返回-2，说明发生结构错误
-                    message="err:Your formula is illegal,\np      lease check and reenter formula";
+                    message="err:Your formula is illegal,\n      please check and reenter formula";
                     return -2;
                 }else{
                     //未出现计算错误，将结果压入操作数栈
@@ -94,5 +94,8 @@ double calcu::getReult()
         }
     }
     message="normal";
-    return OPND.topValue();  
+    double restemp=OPND.topValue();
+    OPND.clear();
+    OPTR.clear();
+    return restemp;
 }

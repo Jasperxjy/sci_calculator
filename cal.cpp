@@ -24,8 +24,8 @@ int cal::get(char op,double x,double y,double &r)
             return -1;
         }
     }
-    if ( op == '^' ){
-        if ( x < 0 && fmod(y,2) ==0 ){//负数的偶数次方
+    if ( op == '^' ){  
+        if ( x < 0 && fmod(pow(y,-1),2) ==0 ){//负数的偶数次方
             return -2;
         }
         if ( x == 0 && y <= 0 ){//0的非负数次方

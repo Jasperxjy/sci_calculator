@@ -16,7 +16,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     //设置窗口大小
     this->resize(500,380);
-    inputEdit->move(50,50);
+    inputEdit->move(50,30);
     //设置提示信息
     inputEdit->setPlaceholderText("please input formula...");
     //让输入框显示“一键清除”按钮
@@ -29,15 +29,15 @@ MainWindow::MainWindow(QWidget *parent) :
     //设置按钮文字
     beginbutton->setText("Start");
     //设置按钮位置
-    beginbutton->move(215,110);
+    beginbutton->move(215,100);
 
     //设置答案框位置
-    resultinfo->move(100,140);
+    resultinfo->move(100,150);
     //设置答案框大小
     resultinfo->resize(300,30);
 
     //设置提示框位置
-    basicinfo->move(50,110);
+    basicinfo->move(50,135);
     //设置提示框大小
     basicinfo->resize(400,300);
     //设置提示信息
@@ -49,9 +49,9 @@ MainWindow::MainWindow(QWidget *parent) :
                        "After typing, press Enter or Start to get the answer");
 
     //设置消息框位置
-    messagebox->move(50,85);
+    messagebox->move(50,65);
     //设置消息框大小
-    messagebox->resize(400,30);
+    messagebox->resize(300,30);
 
     //实现按确定得到答案
     QObject::connect(beginbutton,&QPushButton::clicked,[=](){
