@@ -1,4 +1,4 @@
-#include "isdigit.h"
+﻿#include "isdigit.h"
 
 Isdigit::Isdigit()
 {
@@ -7,6 +7,9 @@ Isdigit::Isdigit()
 
 bool Isdigit::judge(char ch)
 {
-
-    return false;
+    if(ch>='0'&&ch<='9'){
+    return true;
+    }else{
+        return false;
+    }
 }

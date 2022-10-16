@@ -7,6 +7,22 @@ isoperator::isoperator()
 
 bool isoperator::judge(char ch)
 {
- //Çë±àĞ´
-    return false;//Õ¼Î»·û
+    switch (ch) {
+    case '+' :
+    return true;
+    case '-' :
+    return true;
+    case '*' :
+    return true;
+    case '/' :
+    return true;
+    case '%' :
+    return true;
+    case '&' :
+    return true;
+    case '^' :
+    return true;
+    default:
+        return false;
+    }
 }
