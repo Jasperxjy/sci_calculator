@@ -27,7 +27,7 @@ MainWindow::MainWindow(QWidget *parent) :
     //设置按钮大小
     beginbutton->resize(70,30);
     //设置按钮文字
-    beginbutton->setText("Begin");
+    beginbutton->setText("Start");
     //设置按钮位置
     beginbutton->move(215,110);
 
@@ -57,7 +57,6 @@ MainWindow::MainWindow(QWidget *parent) :
     QObject::connect(beginbutton,&QPushButton::clicked,[=](){
         QString temp = inputEdit->text();
         mycalculator->formula=temp;
-        qDebug()<<mycalculator->formula;
         result=mycalculator->getReult();
         resultinfo->setText("Result: "+QString::number(result,'f',8));
         if(mycalculator->message!=""){
@@ -68,7 +67,6 @@ MainWindow::MainWindow(QWidget *parent) :
     QObject::connect(inputEdit,&QLineEdit::returnPressed,[=](){
         QString temp = inputEdit->text();
         mycalculator->formula=temp;
-        qDebug()<<mycalculator->formula;
         result=mycalculator->getReult();
         resultinfo->setText("Result: "+QString::number(result,'f',8));
         if(mycalculator->message!=""){

@@ -8,7 +8,6 @@
 #include "osp.h"//返回站外优先级
 #include "isdigit.h"
 #include "QString" //引入字符串
-#include "QDebug"
 #include <iostream>
 #include "cmath"
 
